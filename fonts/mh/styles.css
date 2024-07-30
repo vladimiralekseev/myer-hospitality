@@ -50,3 +50,9 @@
 .icon-phone:before {
   content: "\64";
 }
+.icon-menu:before {
+  content: "\65";
+}
+.icon-x:before {
+  content: "\66";
+}
