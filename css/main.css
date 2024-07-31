@@ -141,6 +141,7 @@ main {flex: 1;}
 .btn-third:hover {background:var(--c-main)!important;color:#fff;}
 
 .tag {background:var(--c-gray-light);padding:5px 15px;margin:0 10px 10px 0;display:inline-block;border-radius:4px;}
+.tag-white {background:#fff;}
 
 @media (max-width: 1600px) {
     html, body, td, th {font-size:16px;}
@@ -174,12 +175,35 @@ main {flex: 1;}
     .btn {border-radius:6px;padding:5px 10px;}
 }
 
+@media (max-width: 768px) {
+    h1, h2.h1, .h1 {font-size:30px;}
+    h2, h1.h2, .h2 {font-size:24px;}
+    h3, .h3 {font-size:20px}
+    h4, .h4 {font-size:18px}
+}
+
 @media (max-width: 576px) {
+    h1, h2.h1, .h1 {font-size:25px;}
+    h2, h1.h2, .h2 {font-size:22px;}
+    h3, .h3 {font-size:19px}
+    h4, .h4 {font-size:17px}
     .logo {max-height:40px;}
 }
 
 @media (max-width: 1200px) {
     .mb-dynamic {margin-bottom: 3rem;}
+}
+
+.hotel-main-slider .splide__arrow:before, .gallery .splide__arrow:before, .rooms .splide__arrow:before {
+    font-family: "mh" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .header-container {display:flex;justify-content:space-between;align-items:center;}
@@ -302,4 +326,91 @@ header .menu-up-control.menu-up-control-is-open .icon-menu {display:none;}
 @media (max-width: 576px) {
     .small-hotels {gap:15px 0;flex-direction:column;}
     .small-hotels .it {width:100%;}
+}
+
+.hotel-main-slider {position:relative;}
+.hotel-main-slider .splide__arrow {background:#fff;opacity:1;border-radius:4px;}
+.hotel-main-slider .splide__arrow svg {display:none;}
+.hotel-main-slider .splide__arrow:before {display:block;}
+.hotel-main-slider .splide__arrow--prev:before {content:"a";}
+.hotel-main-slider .splide__arrow--next:before {content:"b";}
+.hotel-main-slider li {padding:0;margin:0;}
+.hotel-main-slider .fixed {position:relative;}
+.hotel-main-slider .h1 {position:absolute;bottom:20px;color:#fff;}
+.hotel-main-slider .img {width:100%;height:800px;position: relative;background:50% 50% no-repeat;background-size:cover;}
+.hotel-main-slider .img:before {display:block;content:"";position:absolute;top:0;left:0;bottom:0;right:0;background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%);}
+.hotel-main-slider .img .container-data {position:absolute;z-index:10;top:0;left:0;bottom:0;right:0;display:flex;align-items:flex-end;padding:0 0 50px;}
+.hotel-main-slider .img .container-data > div {width:100%;}
+@media (max-width: 1600px) {
+    .hotel-main-slider .img {height:auto;padding-top:50%;}
+}
+@media (min-width: 992px) {
+    .hotel-main-slider .splide__arrow {top:auto;bottom:20px;}
+    .hotel-main-slider .splide__arrow--prev {left:auto;right:55px;}
+}
+@media (max-width: 768px) {
+    .hotel-main-slider .h1 {position:static;bottom:auto;color:var(--c-text-main);}
+}
+@media (max-width: 576px) {
+    .hotel-main-slider .img {padding:100px 0;}
+    .hotel-main-slider .img .container-data {padding:0;position:relative;}
+}
+
+.reserve-room {background:var(--c-gray-light);padding:30px 0;}
+
+.hotel-description .contact {font-size:24px;font-weight:bold;}
+.hotel-description .contact a {color:var(--c-text-main);}
+.hotel-description .contact .icon {color:var(--c-green);}
+@media (max-width: 1600px) {
+    .hotel-description .contact {font-size:20px;}
+}
+@media (max-width: 768px) {
+    .hotel-description .contact {font-size:16px;}
+}
+
+.hotel-amenities {background:var(--c-gray-light);padding:30px 0;}
+
+.gallery .navigation {background:var(--c-gray-light);padding:10px;border-radius:8px;}
+.gallery .splide {overflow: hidden;border-radius:8px;}
+.gallery .splide__arrow {background:#fff;opacity:1;border-radius:4px;}
+.gallery .splide__arrow svg {display:none;}
+.gallery .splide__arrow:before {display:block;}
+.gallery .splide__arrow--prev:before {content:"a";}
+.gallery .splide__arrow--next:before {content:"b";}
+.gallery .splide__arrow {top:auto;bottom:0;}
+.gallery .splide__arrow--prev {left:auto;right:55px;}
+.gallery li {padding:0;margin:0;}
+.gallery .img {width:100%;height:690px;position: relative;background:50% 50% no-repeat;background-size:cover;}
+.gallery .img:before {display:block;content:"";position:absolute;top:0;left:0;bottom:0;right:0;background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%);}
+.gallery .img .container-data {position:absolute;z-index:10;top:0;left:0;bottom:0;right:0;display:flex;align-items:flex-end;padding:0 0 50px;}
+.gallery .img .container-data > img {display:none;}
+.gallery .extend-images {display:flex;flex-direction:column;height:100%;gap:10px;}
+.gallery .extend-images > div {flex:1;border-radius:8px;background:50% 50% no-repeat;background-size:cover;cursor:pointer;}
+.splide-info {position:relative;}
+.splide-info div {position:absolute;background:#fff;padding:0 15px;font-weight:bold;height:2em;top:-48px;left:16px;align-items: center;display:flex;border-radius:4px;}
+@media (max-width: 1600px) {
+    .gallery .img {height:auto;padding-top:50%;}
+}
+@media (max-width: 576px) {
+    .hotel-main-slider .img {padding:100px 0;}
+    .hotel-main-slider .img .container-data {padding:0;position:relative;}
+}
+
+.rooms .splide__arrow {opacity:1;top:-40px;background:var(--c-main);color:#fff;border-radius:4px;}
+.rooms .splide__arrow svg {display:none;}
+.rooms .splide__arrow:before {display:block;}
+.rooms .splide__arrow--prev {right:40px;left:auto;}
+.rooms .splide__arrow--prev:before {content:"a"}
+.rooms .splide__arrow--next {right:0;}
+.rooms .splide__arrow--next:before {content:"b"}
+.rooms ul.splide__list li {background:var(--c-gray-light);padding:20px;border-radius:12px;}
+.rooms ul.splide__list li img {opacity:0;height:174px;}
+.rooms ul.splide__list li .img {background:50% 50% no-repeat;background-size:cover;height:174px;border-radius:8px;margin:0 0 10px;}
+.rooms ul.splide__list li .name {font-weight: bold;font-size: 24px;margin:0 0 10px;}
+.rooms ul.splide__list li .description {margin:0 0 10px;}
+.rooms ul.splide__list li .guests .up-to {color:var(--c-green);font-weight: bold;}
+
+@media (max-width: 768px) {
+    .rooms .splide__arrow {top:-32px;border-radius:4px;width:30px;height:30px;}
+    .rooms .splide__arrow--prev {right:35px;}
 }
