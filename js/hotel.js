@@ -21,6 +21,51 @@ roomsSlider.on('resize', function () {
 });
 roomsSlider.mount();
 
+let ticketsSlider = new Splide('.js-tickets-splide', {
+    perPage: perPageCount(),
+    rewind: true,
+    type: 'loop',
+    gap: '1rem',
+    pagination: false
+});
+
+ticketsSlider.on('resize', function () {
+    ticketsSlider.options = {
+        perPage: perPageCount(),
+    };
+});
+ticketsSlider.mount();
+
+let packagesSlider = new Splide('.js-packages-splide', {
+    perPage: perPageCount(),
+    rewind: true,
+    type: 'loop',
+    gap: '1rem',
+    pagination: false
+});
+
+packagesSlider.on('resize', function () {
+    packagesSlider.options = {
+        perPage: perPageCount(),
+    };
+});
+packagesSlider.mount();
+
+let reviewsSlider = new Splide('.js-reviews-splide', {
+    perPage: perPageCount(),
+    rewind: true,
+    type: 'loop',
+    gap: '1rem',
+    pagination: false
+});
+
+reviewsSlider.on('resize', function () {
+    reviewsSlider.options = {
+        perPage: perPageCount(),
+    };
+});
+reviewsSlider.mount();
+
 let gallerySlider = new Splide('.js-gallery-splide', {
     perPage: 1,
     rewind: true,
