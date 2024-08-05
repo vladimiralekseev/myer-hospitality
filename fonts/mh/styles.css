@@ -56,3 +56,12 @@
 .icon-x:before {
   content: "\66";
 }
+.icon-bed:before {
+  content: "\67";
+}
+.icon-chart:before {
+  content: "\68";
+}
+.icon-team-fill:before {
+  content: "\69";
+}
