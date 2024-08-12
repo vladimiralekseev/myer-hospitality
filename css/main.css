@@ -419,6 +419,13 @@ header .menu-up-control.menu-up-control-is-open .icon-menu {display:none;}
     .splide-nav-up-right .splide__arrow--prev {right:35px;}
 }
 
+.awards-list ul.splide__list li img {opacity:0;height:200px;}
+.awards-list .splide__arrows {margin:0 auto;max-width:1700px;position:relative;}
+.awards-list .splide__arrows > * {margin-right:20px;}
+@media (max-width: 576px) {
+    .awards-list .splide__arrows {display:none;}
+}
+
 .hotel-amenities-list .title {font-weight:600;color:var(--c-green);margin:0 0 15px;}
 .hotel-amenities-list ul {column-count:4;padding:0;}
 .hotel-amenities-list ul li {margin:0 0 5px;padding:0 20px 0 0;list-style:none;}

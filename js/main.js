@@ -1,10 +1,16 @@
-let perPageCount = function () {
-    let perPage = $(window).width() > 1383 ? 4 : 3;
-    if ($(window).width() < 974) {
-        perPage = 2;
+let perPageCount = function (count = 4) {
+    let perPage = $(window).width() > 1383 ? count : count - 1;
+    if ($(window).width() < 974 && count - 3 > 0) {
+        perPage = count - 2;
     }
-    if ($(window).width() < 750) {
-        perPage = 1;
+    if ($(window).width() < 750 && count - 3 > 0) {
+        perPage = count - 3;
+    }
+    if ($(window).width() < 576 && count - 4 > 0) {
+        perPage = count - 4;
+    }
+    if ($(window).width() < 450 && count - 5 > 0) {
+        perPage = count - 5;
     }
     return perPage;
 }
