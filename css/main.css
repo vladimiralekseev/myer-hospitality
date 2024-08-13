@@ -1,6 +1,7 @@
 :root {
     --c-text-main: #131314;
     --c-main: #214784;
+    --c-main-07: rgba(33, 71, 132, 0.9);
     --c-main-dark: #990000;
     --c-gray: #B0B0B0;
     --c-gray-light: #F6F7F9;
@@ -213,11 +214,17 @@ main {flex: 1;}
 .header-container {display:flex;justify-content:space-between;align-items:center;}
 .header-container {padding:10px 0;}
 .header-container div:nth-child(2) {flex:2;padding:0 20px;}
-.menu-main, .menu-main li {padding:0;margin:0;}
-.menu-main {text-align:center;}
-.menu-main li {display:inline-block;}
+.menu-main, .menu-main li, .menu-main ul {padding:0;margin:0;}
+.menu-main {text-align:center;position:relative;z-index:100;}
+.menu-main > li {display:inline-block;position:relative;z-index:101;}
 .menu-main a {display:inline-block;padding:0 8px;font-weight:500;color:var(--c-text-main);}
 .menu-main a:hover {color:#666;}
+.menu-main ul {display:none;position:absolute;background:var(--c-main-07);color:#fff;padding:20px 10px 15px;border-radius:8px;}
+.menu-main ul a {color:#fff;display:block;text-align:left;font-size:16px;white-space:nowrap;font-weight:normal;}
+.menu-main ul a:hover {color:#e0e0e0;}
+.menu-main li:hover {z-index:102;}
+.menu-main li:hover ul {display:block;}
+.menu-main li:hover ul li {margin:0 0 5px;}
 
 header .menu-up-control {display:none;color:var(--c-gray);font-size:21px;top:2px;position:relative;cursor:pointer;}
 header .menu-up-control.menu-up-control-is-close .icon-x {display:none;}
