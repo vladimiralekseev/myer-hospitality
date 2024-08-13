@@ -19,7 +19,7 @@ form {margin:0;padding:0;}
 a {color:var(--c-main);text-decoration:none;}
 a:hover, a:focus {color:var(--c-main);text-decoration:none;}
 img {border:none;}
-input:not([type="submit"]), select:not([multiple]), select:not([multiple]) option, textarea, .form-control:not([multiple]), .input-daterange input:first-child {border:2px solid var(--c-gray-light-2);border-radius:8px;color:var(--c-text-main);background:var(--c-white);}
+input:not([type="submit"]), select:not([multiple]), select:not([multiple]) option, textarea, .form-control:not([multiple]), .input-daterange input:first-child {border:2px solid var(--c-gray-light);border-radius:8px;color:var(--c-text-main);background:#fff;}
 input:not([type="submit"]), select:not([multiple]), select:not([multiple]) option, .form---control:not([multiple]) {line-height:38px !important;height:40px !important;padding:0 10px;}
 input:hover, select:hover, select:not([multiple]) option:hover, textarea:hover, .form-control:hover {border-color:var(--c-gray-light);}
 input:focus, select:focus, select:not([multiple]) option:focus, textarea:focus, .form-control:focus {border-color:var(--c-main);box-shadow:none;}
@@ -39,7 +39,7 @@ input[type=checkbox]:disabled+label:before, input[type=radio]:disabled+label:bef
 input[type=checkbox]:checked:disabled+label:before {background:var(--c-gray-light-2);color:var(--c-gray-light);}
 input[type=radio]:checked:disabled+label:before {background:var(--c-gray-light);}
 
-::placeholder {color:var(--c-dark-a30)!important;}
+::placeholder {color:var(--c-gray)!important;}
 
 input::-ms-clear {display: none;}
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}
@@ -134,6 +134,8 @@ main {flex: 1;}
 
 .green {color:var(--c-green);}
 .blue {color:var(--c-main);}
+.white {color:#fff;}
+.bg-blue {background:var(--c-main);}
 
 .btn {border:1px solid transparent;border-radius:8px;padding:10px 15px;font-weight:400;}
 .btn:focus, .btn:active, .btn:active:focus {box-shadow:none;}
@@ -505,4 +507,22 @@ header .menu-up-control.menu-up-control-is-open .icon-menu {display:none;}
     .nav-press-room {margin:0 0 10px;}
     .press-list {gap:10px;}
     .press-list .it {width:100%;height:auto;}
+}
+
+.blog-search {position:relative;}
+.blog-search button {position:absolute;top:10px;right:10px;background:none;border:none;color:var(--c-text-main);}
+
+.blog .post {border-top:1px solid var(--c-gray);margin:0 0 50px;padding:50px 0 0;}
+.blog .post:first-child {border:none;padding:0;}
+.blog .post .date {background:var(--c-gray-light);float:left;width:260px;border-radius:4px;font-weight:bold;color:var(--c-main);}
+.blog .post .date .icon {font-size:28px;}
+.blog .post .post-description {margin:0 290px;}
+@media (max-width: 1200px) {
+    .press-list {gap:15px 2%;}
+    .press-list .it {width:49%;height:200px;}
+    .blog .post .post-description {margin:0 0 0 290px;}
+}
+@media (max-width: 768px) {
+    .blog .post {margin:0 0 30px;padding:30px 0 0;}
+    .blog .post .post-description {margin:0;}
 }

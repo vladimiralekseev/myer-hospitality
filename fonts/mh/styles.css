@@ -65,3 +65,9 @@
 .icon-team-fill:before {
   content: "\69";
 }
+.icon-search:before {
+  content: "\6a";
+}
+.icon-calendar:before {
+  content: "\6b";
+}
