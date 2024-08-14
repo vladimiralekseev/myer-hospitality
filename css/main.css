@@ -234,9 +234,12 @@ header .menu-up-control.menu-up-control-is-open .icon-menu {display:none;}
 @media (max-width: 768px) {
     header .menu-up-control {display:block;}
     header.header-menu-is-open {position:fixed;top:0;bottom:0;left:0;right:0;z-index: 999;margin:0;}
-    header .menu-main {display:none;}
-    header .menu-main li {display:block;margin:0 0 10px;}
+    header .menu-main {display:none;text-align:left;}
+    header .menu-main li {display:block;margin:0 0 5px;}
     header.header-menu-is-open .menu-main {display:block;position:absolute;top:100px;left:20px;right:20px;z-index: 999;}
+    header .menu-main li ul {display:block;position:relative;background:none;padding:10px 0 10px 10px;}
+    header .menu-main li ul li {margin:0 0 3px!important;}
+    header .menu-main a, header .menu-main a:hover {color:var(--c-text-main);white-space:normal;}
 }
 
 .main-block {width:100%;height:800px;position: relative;background:url('../img/branson-hospitality.jpg') 50% 50% no-repeat;background-size:cover;}
