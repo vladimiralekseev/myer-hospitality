@@ -71,3 +71,6 @@
 .icon-calendar:before {
   content: "\6b";
 }
+.icon-arrow-next:before {
+  content: "\6c";
+}
