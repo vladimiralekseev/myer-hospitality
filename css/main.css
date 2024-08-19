@@ -150,6 +150,8 @@ main {flex: 1;}
 .tag {background:var(--c-gray-light);padding:5px 15px;margin:0 10px 10px 0;display:inline-block;border-radius:4px;}
 .tag-white {background:#fff;}
 
+.img-border {border-radius:8px;}
+
 @media (max-width: 1600px) {
     html, body, td, th {font-size:16px;}
 
@@ -295,11 +297,12 @@ header .menu-up-control.menu-up-control-is-open .icon-menu {display:none;}
 }
 
 .services {display:flex;gap:10px 1%;flex-direction: row;flex-wrap: wrap;}
-.services .it {border-radius:12px;background:var(--c-gray-light);padding:15px;width:24%;}
-.services .it img {border-radius:8px;display:block;margin:0 0 5px;width: 100%;}
+.services .it {border-radius:12px;background:var(--c-gray-light);padding:25px;width:24%;}
+.services .it img {border-radius:8px;display:block;margin:0 0 15px;width: 100%;}
 @media (max-width: 992px) {
     .services {gap:10px 2%;}
-    .services .it {width:48%;}
+    .services .it {width:48%;padding:15px;}
+    .services .it img {margin:0 0 10px;}
 }
 @media (max-width: 576px) {
     .services {gap:10px 0;flex-direction:column;}
@@ -312,13 +315,14 @@ header .menu-up-control.menu-up-control-is-open .icon-menu {display:none;}
 .packages-main-more {background:var(--c-gray-light);text-align:center;padding:30px 0;}
 
 .guides {display:flex;gap:15px 1.3%;flex-direction: row;flex-wrap: wrap;}
-.guides .it {border-radius:12px;background:var(--c-gray-light);padding:15px 15px 70px;width:32%;position:relative;}
+.guides .it {border-radius:12px;background:var(--c-gray-light);padding:25px 25px 80px;width:32%;position:relative;}
 .guides .it img {border-radius:8px;display:block;margin:0 0 10px;width: 100%;}
-.guides .it .btn {position:absolute;bottom:15px;left:15px;right:15px;}
-.guides .it .name {font-weight:bold;}
+.guides .it .btn {position:absolute;bottom:25px;left:25px;right:25px;}
+.guides .it .name {font-weight:bold;margin:15px 0;display:block;}
 @media (max-width: 992px) {
     .guides {gap:15px 2%;}
-    .guides .it {width:48%;}
+    .guides .it {width:48%;padding:15px 15px 70px;}
+    .guides .it .btn {bottom:15px;left:15px;right:15px;}
 }
 @media (max-width: 576px) {
     .guides {gap:15px 0;flex-direction:column;}
@@ -331,13 +335,14 @@ header .menu-up-control.menu-up-control-is-open .icon-menu {display:none;}
 .join-e-club {background:var(--c-main);padding:30px 0;color:#fff;}
 
 .small-hotels {display:flex;gap:15px 1%;flex-direction: row;flex-wrap: wrap;}
-.small-hotels .it {border-radius:12px;background:var(--c-gray-light);padding:15px 15px 70px;width:24%;position:relative;}
+.small-hotels .it {border-radius:12px;background:var(--c-gray-light);padding:25px 25px 80px;width:24%;position:relative;}
 .small-hotels .it img {border-radius:8px;display:block;margin:0 0 10px;width: 100%;}
-.small-hotels .it .btn {position:absolute;bottom:15px;left:15px;right:15px;}
-.small-hotels .it .name {font-weight:bold;}
+.small-hotels .it .btn {position:absolute;bottom:25px;left:25px;right:25px;}
+.small-hotels .it .name {font-weight:bold;margin:15px 0;display:block;}
 @media (max-width: 992px) {
     .small-hotels {gap:15px 2%;}
-    .small-hotels .it {width:48%;}
+    .small-hotels .it {width:48%;padding:15px 15px 70px;}
+    .small-hotels .it .btn {bottom:15px;left:15px;right:15px;}
 }
 @media (max-width: 576px) {
     .small-hotels {gap:15px 0;flex-direction:column;}
@@ -533,3 +538,20 @@ header .menu-up-control.menu-up-control-is-open .icon-menu {display:none;}
 .navigation {color:#fff;}
 .navigation a {color:#fff;}
 .navigation .current {color:var(--c-gray);}
+
+.experience > .row {border-top:1px solid var(--c-gray);margin:30px 0 0;padding:50px 0 0;}
+.experience > .row:first-child {border-top:none;margin:0;padding:0;}
+
+.adventure {display:flex;flex-direction:row;flex-wrap:wrap;gap:50px 2%;}
+.adventure .it {border-radius:8px;width:32%;background: var(--c-gray-light);padding:20px;display:flex;flex-direction:column;justify-content:space-between;}
+.adventure .it .img {display:block;margin:0 0 15px;border-radius:8px;padding-top:50%;background:50% 50% no-repeat;background-size:cover;}
+.adventure .it .img img {display:none;}
+.adventure .it .name {font-weight:bold;margin:0 0 10px;}
+.adventure .it .description {margin:0 0 30px;}
+@media (max-width: 992px) {
+    .adventure {gap:20px 2%;}
+    .adventure .it {width:49%;}
+}
+@media (max-width: 576px) {
+    .adventure .it {width:100%;}
+}
