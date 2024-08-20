@@ -136,6 +136,7 @@ main {flex: 1;}
 .blue {color:var(--c-main);}
 .white {color:#fff;}
 .bg-blue {background:var(--c-main);}
+.bg-gray-light {background:var(--c-gray-light);}
 
 .btn {border:1px solid transparent;border-radius:8px;padding:10px 15px;font-weight:400;}
 .btn:focus, .btn:active, .btn:active:focus {box-shadow:none;}
