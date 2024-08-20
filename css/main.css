@@ -337,12 +337,15 @@ header .menu-up-control.menu-up-control-is-open .icon-menu {display:none;}
 .small-hotels {display:flex;gap:15px 1%;flex-direction: row;flex-wrap: wrap;}
 .small-hotels .it {border-radius:12px;background:var(--c-gray-light);padding:25px 25px 80px;width:24%;position:relative;}
 .small-hotels .it img {border-radius:8px;display:block;margin:0 0 10px;width: 100%;}
-.small-hotels .it .btn {position:absolute;bottom:25px;left:25px;right:25px;}
+.small-hotels .it .btns {position:absolute;bottom:25px;left:25px;right:25px;}
+.small-hotels .it .btns .btn {width:100%;margin-top:10px;}
 .small-hotels .it .name {font-weight:bold;margin:15px 0;display:block;}
+.small-hotels-extra .it {padding:25px 25px 140px;}
 @media (max-width: 992px) {
     .small-hotels {gap:15px 2%;}
     .small-hotels .it {width:48%;padding:15px 15px 70px;}
-    .small-hotels .it .btn {bottom:15px;left:15px;right:15px;}
+    .small-hotels .it .btns {bottom:15px;left:15px;right:15px;}
+    .small-hotels-extra .it {padding:15px 15px 120px;}
 }
 @media (max-width: 576px) {
     .small-hotels {gap:15px 0;flex-direction:column;}
