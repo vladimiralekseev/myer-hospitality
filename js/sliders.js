@@ -90,17 +90,8 @@ if ($('.js-reviews-splide').length) {
 }
 
 if ($('.js-gallery-splide').length) {
-    let gallerySlider = new Splide('.js-gallery-splide', {
-        perPage: 1,
-        rewind: true,
-        type: 'loop',
-        pagination: false
-    });
-    gallerySlider.on('moved', function (newIndex, prevIndex, destIndex) {
-        console.log(newIndex, prevIndex, destIndex)
-        extendImages.setExtendImages(newIndex)
-    });
-    gallerySlider.mount();
+    const arrGallery = []
+
     let extendImages = {
         init: function() {
             this.setExtendImages(0)
@@ -118,11 +109,33 @@ if ($('.js-gallery-splide').length) {
             const img2 = $('.js-gallery-splide').find('li').eq(c > i+1 ? i+1 : 1)
             $('.js-extend-images > div').eq(0).css('background-image', 'url(' + img1.data('img') + ')')
             $('.js-extend-images > div').eq(1).css('background-image', 'url(' + img2.data('img') + ')')
-            $('.js-splide-info > div').text((i+1) + '/' + gallerySlider.r.length)
-            console.log(gallerySlider.r.length)
         }
     }
     extendImages.init();
+
+    $('.js-gallery-splide').each(function(i) {
+        const jsId = 'js-gallery-splide-' + i
+        $(this).addClass(jsId)
+
+        arrGallery.push(
+            new Splide('.' + jsId, {
+                perPage: 1,
+                rewind: true,
+                type: 'loop',
+                pagination: false
+            })
+        )
+        arrGallery[i].on('moved ready', function (newIndex, prevIndex, destIndex) {
+            extendImages.setExtendImages(newIndex)
+            if (!newIndex) {
+                newIndex = 0
+            }
+            console.log(newIndex)
+            console.log('.' + jsId + ' .js-splide-info > div')
+            $('.' + jsId).closest('.gallery').find('.js-splide-info > div').text((newIndex+1) + '/' + arrGallery[i].r.length)
+        });
+        arrGallery[i].mount();
+    });
 }
 
 
